@@ -202,6 +202,8 @@ module.exports = function(robot) {
   });
 
   robot.hear(/\b((err|problem|issue|bug).*PRS)|(PRS.*(err|problem|issue|bug)|:hankey:|:poop:|:shit:)/i, function(msg) {
-    sendMessage(msg, ["Q U E   B A R R A C A!!!!"]);
+    if(msg.message.user.room == "cpa"){
+      sendMessage(msg, ["Q U E   B A R R A C A!!!!"]);
+    }
   });
 };
